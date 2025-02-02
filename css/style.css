@@ -1,0 +1,126 @@
+/* banner principal */
+.banner {
+    width: 100%; 
+    height: 300px; 
+    background-image: url('https://cdn.pixabay.com/photo/2022/01/20/19/32/flowers-6953228_1280.jpg');
+    background-size: cover; 
+    background-position: center; 
+    display: flex;
+    flex-direction: column;
+    align-items: center; 
+    justify-content: center; 
+    text-align: center;
+    color: white; 
+    position: relative; 
+}
+
+/* botões dentro do banner */
+.banner-buttons {
+    margin-top: 70px; 
+}
+
+/* links (botões) do banner */
+.banner-buttons a {
+    background-color: #fac62a; 
+    color: white; 
+    text-decoration: none; 
+    padding: 10px 20px; 
+    border-radius: 5px; 
+    margin: 5px; 
+    transition: 0.5s; 
+}
+
+/* Efeito ao passar o mouse nos botões */
+.banner-buttons a:hover {
+    background-color: #fac62a; 
+}
+
+/* Ajustando a bolota */
+.bolota {
+    width: 230px;  
+    height: 230px; 
+    background-image: url('https://cdn.pixabay.com/photo/2022/01/20/19/32/flowers-6953228_1280.jpg'); /* mesma imagem do banner */
+    background-size: cover; 
+    border-radius: 50%; 
+    border: 5px solid white; 
+    position: absolute; 
+    bottom: -90px; 
+    left: 120px; 
+}
+
+
+
+.botao-ver-produto {
+    display: inline-block;
+    padding: 10px 20px;
+    background-color: #4CAF50;
+    color: white;
+    text-decoration: none;
+    border-radius: 5px;
+}
+
+.botao-ver-produto:hover {
+    background-color: #388E3C;
+}
+
+form {
+    display: flex;
+    flex-direction: column; 
+    align-items: center; 
+    text-align: center; 
+    gap: 10px; 
+}
+
+h2, h3, h4 {
+    text-align: center; 
+}
+
+input[type="submit"] {
+    width: 200px; 
+    font-weight: bold;
+    cursor: pointer;
+}
+
+input[type="submit"] {
+    width: 300px; 
+    height: 50px; 
+    font-size: 16px; 
+    font-weight: bold; 
+    cursor: pointer; 
+    border-radius: 10px; 
+}
+
+form {
+    width: 100%; 
+    max-width: 500px; 
+    margin: 0 auto; 
+    padding: 20px; 
+    background-color: #f9f9f9; 
+    border-radius: 10px; 
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1); 
+}
+
+/* Ajuste nos campos de entrada */
+input[type="text"], 
+input[type="submit"] {
+    width: 100%; 
+    height: 40px; 
+    font-size: 16px; 
+    padding: 5px; 
+    margin-bottom: 10px; 
+    border-radius: 5px; 
+    border: 1px solid #ccc; 
+}
+
+/* Ajuste no botão */
+input[type="submit"] {
+    background-color: #4CAF50; 
+    color: white; 
+    font-weight: bold; 
+    cursor: pointer; 
+}
+
+/* Efeito ao passar o mouse */
+input[type="submit"]:hover {
+    background-color: #45a049; 
+}
