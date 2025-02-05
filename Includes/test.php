@@ -54,8 +54,7 @@ while ($i < count($dados)){
     echo $dados[$i]["quantidade"];
     echo $dados[$i]["preco_unitario"];
     echo $dados[$i]["total"];
-    echo $dados[$i]["estoque"];
-
+   
     echo "<br>";
     $i++;
 };

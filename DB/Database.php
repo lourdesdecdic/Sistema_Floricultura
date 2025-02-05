@@ -49,8 +49,6 @@ class Database{
         //Montar query
         $query = 'INSERT INTO ' . $this->table .'  (' .implode(',',$fields). ') VALUES (' .implode(',',$binds).')';
         //DEBUG para saber se está montando a query corretamente
-        // print_r($query);
-        // print_r(array_values($values));
         
         //Método para executar a Query
         $result = $this->execute($query,array_values($values));
@@ -102,7 +100,4 @@ class Database{
             $result = $this->execute($sql);
             return true;
     }
-
-    
-
 }

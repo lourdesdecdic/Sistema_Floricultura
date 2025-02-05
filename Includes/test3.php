@@ -272,3 +272,16 @@ class Venda {
         $this->estoque = $estoque;
     }
 }
+
+
+
+
+    <form method="POST">  
+        <input type="text" name="data_venda" id="data_venda" placeholder="Digite a data_venda ">
+        <input type="text" name="cliente_id" id="cliente_id" placeholder="Digite o cliente_id ">
+        <input type="text" name="produto_id" id="produto_id" placeholder="Digite o produto_id ">
+        <input type="text" name="quantidade" id="quantidade" placeholder="Digite a quantidade vendida ">
+        <input type="text" name="preco_unitario" id="preco_unitario" placeholder="Digite o preco_unitário ">
+        <input type="text" name="total" id="total" placeholder="Digite o total da venda ">
+        <input type="submit" name="cadastrar_venda" value="Cadastrar">
+    </form> 

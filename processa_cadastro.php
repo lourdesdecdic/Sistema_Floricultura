@@ -1,10 +1,7 @@
 <?php
-require './DB/Database.php';
 require './Entity/Cliente.php';
 require './Entity/Produto.php';
 require './Entity/Venda.php';
-
-$db = new Database();
 
 // Cadastro de Cliente
 if (isset($_POST['cadastrar_cliente'])) {
@@ -45,13 +42,14 @@ if (isset($_POST['cadastrar_venda'])) {
     $cliente_id = $_POST['cliente_id'];
     $produto_id = $_POST['produto_id'];
     $quantidade = $_POST['quantidade'];
-    $preco_unitario = $_POST['preco_unitario']; // recebe o preço unitário
-
+    $preco_unitario = $_POST['preco_unitario'];
+    $total = $_POST['total'];
+ 
     // Calcula o total
     $total = $preco_unitario * $quantidade;
 
     // Cria o objeto venda com os dados
-    $venda = new Venda($data_venda, $cliente_id, $produto_id, $quantidade, $total);
+    $venda = new Venda($data_venda, $cliente_id, $produto_id, $quantidade, $preco_unitario, $total);
 
     // Realiza o cadastro da venda
     $result = $venda->cadastrar();

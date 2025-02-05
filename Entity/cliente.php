@@ -1,21 +1,76 @@
 <?php 
-require './Entity/Cliente.php'; // Inclui a classe Cliente
-//require './DB/Database.php'; // Inclui o Banco de Dados
 
-$dados = new Cliente('','','');
-$clientes_banco = $dados->buscar();
+require './DB/Database.php';
 
-if(isset($_POST['cadastrar'])){
-    $nome = $_POST['nome'];
-    $cpf = $_POST['cpf'];
-    $email = $_POST['email'];
+class Cliente {
+    private $id;
+    private $nome;
+    private $cpf;
+    private $email;
 
-    $cliente = new Cliente($nome,$cpf,$email);
-    $result = $cliente->cadastrar();
-    if($result){
-        echo '<script> alert("Cliente cadastrado com sucesso!!") </script>';
-    }else{
-        echo 'Error';
+    // Construtor
+    public function __construct($nome, $cpf, $email) {
+        $this->nome = $nome;
+        $this->cpf = $cpf;
+        $this->email = $email;
+    }
+
+    // Método de cadastro 
+    public function cadastrar(){
+        $db = new Database('cliente');
+        $result =  $db->insert([
+            'nome' => $this->nome,
+            'cpf' => $this->cpf,
+            'email' => $this->email
+        ]);
+        
+        if($result) {
+            return true;
+        }
+        else{
+            return false;
+        }
+    }
+
+    public static function buscar($where=null,$order=null,$limit=null){
+        return (new Database('cliente'))->select()->fetchAll(PDO::FETCH_ASSOC); //FETCHALL
+    }
+
+    public function excluir($id){
+        return (new Database('cliente'))->delete('id = '.$id);
+    }
+
+    // Getters
+    public function getId() {
+        return $this->id;
+    }
+
+    public function getNome() {
+        return $this->nome;
+    }
+
+    public function getCPF() {
+        return $this->cpf;
+    }
+
+    public function getEmail() {
+        return $this->email;
+    }
+
+    // Setters
+    public function setId($id) {
+        $this->id = $id;
+    }
+
+    public function setNome($nome) {
+        $this->nome = $nome;
+    }
+
+    public function setCPF($cpf) {
+        $this->cpf = $cpf;
+    }
+
+    public function setEmail($email) {
+        $this->email = $email;
     }
 }
-?>
