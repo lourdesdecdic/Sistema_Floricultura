@@ -14,26 +14,73 @@
     position: relative; 
 }
 
-/* botões dentro do banner */
+/* Container geral dos botões dentro do banner */
 .banner-buttons {
-    margin-top: 70px; 
-}
-
-/* links (botões) do banner */
-.banner-buttons a {
-    background-color: #fac62a; 
-    color: white; 
-    text-decoration: none; 
-    padding: 10px 20px; 
-    border-radius: 5px; 
-    margin: 5px; 
-    transition: 0.5s; 
-}
-
-/* Efeito ao passar o mouse nos botões */
-.banner-buttons a:hover {
-    background-color: #fac62a; 
-}
+    display: flex;
+    gap: 15px;
+    justify-content: center;
+    margin-top: 20px;
+  }
+  
+  /* Cada dropdown é posicionado de forma relativa para que o conteúdo possa ser posicionado corretamente */
+  .dropdown {
+    position: relative;
+    display: inline-block;
+  }
+  
+  /* Estilização do botão */
+  .dropbtn {
+    background-color: #fbbe06; /* Cor de fundo */
+    color: white; /* Cor do texto */
+    padding: 10px 20px;
+    font-size: 16px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    gap: 5px; /* Espaço entre o texto e a seta */
+  }
+  
+  /* Estilização da seta */
+  .arrow {
+    font-size: 12px; /* Tamanho parecido com os spinners de input number */
+    transition: transform 0.3s ease;
+  }
+  
+  /* Conteúdo do dropdown inicialmente escondido */
+  .dropdown-content {
+    display: none;
+    position: absolute;
+    background-color: #f9f9f9;
+    min-width: 120px;
+    box-shadow: 0px 8px 16px rgba(0, 0, 0, 0.2);
+    border-radius: 5px;
+    z-index: 1;
+  }
+  
+  /* Estilização dos links dentro do dropdown */
+  .dropdown-content a {
+    color: black;
+    padding: 10px 12px;
+    text-decoration: none;
+    display: block;
+  }
+  
+  /* Efeito hover para os links do dropdown */
+  .dropdown-content a:hover {
+    background-color: #f1f1f1;
+  }
+  
+  /* Quando o mouse estiver sobre o dropdown, exibe o conteúdo */
+  .dropdown:hover .dropdown-content {
+    display: block;
+  }
+  
+  /* Rotaciona a seta quando o dropdown estiver ativo (hover) */
+  .dropdown:hover .arrow {
+    transform: rotate(180deg);
+  }
 
 /* Ajustando a bolota */
 .bolota {
@@ -46,21 +93,6 @@
     position: absolute; 
     bottom: -90px; 
     left: 120px; 
-}
-
-
-
-.botao-ver-produto {
-    display: inline-block;
-    padding: 10px 20px;
-    background-color: #4CAF50;
-    color: white;
-    text-decoration: none;
-    border-radius: 5px;
-}
-
-.botao-ver-produto:hover {
-    background-color: #388E3C;
 }
 
 form {
@@ -111,7 +143,7 @@ form {
     border: 1px solid #ccc; 
 }
 
-/* Ajuste no botão */
+/* Ajuste no botão fora do banner */
 input[type="submit"] {
     background-color: #4CAF50; 
     color: white; 

@@ -285,3 +285,39 @@ class Venda {
         <input type="text" name="total" id="total" placeholder="Digite o total da venda ">
         <input type="submit" name="cadastrar_venda" value="Cadastrar">
     </form> 
+
+/* botões dentro do banner */
+.banner-buttons {
+    margin-top: 70px; 
+}
+
+/* links (botões) dentro do banner */
+.banner-buttons a {
+    background-color: #fac62a; 
+    color: white; 
+    text-decoration: none; 
+    padding: 10px 20px; 
+    border-radius: 5px; 
+    margin: 5px; 
+    transition: 0.5s; 
+}
+
+/* Efeito ao passar o mouse nos botões */
+.banner-buttons a:hover {
+    background-color: #fac62a; 
+}
+
+/*.botao-ver-produto {
+    display: inline-block;
+    padding: 10px 20px;
+    background-color: #4CAF50;
+    color: white;
+    text-decoration: none;
+    border-radius: 5px;
+}
+
+.botao-ver-produto:hover {
+    background-color: #388E3C;
+}*/
+
+/*<link rel="stylesheet" href="./css/style.css">*/

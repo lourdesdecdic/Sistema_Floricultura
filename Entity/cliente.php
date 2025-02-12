@@ -1,6 +1,6 @@
 <?php 
 
-require './DB/Database.php';
+require './DB/Database.php'; // Inclui o Banco de Dados
 
 class Cliente {
     private $id;
@@ -9,7 +9,7 @@ class Cliente {
     private $email;
 
     // Construtor
-    public function __construct($nome, $cpf, $email) {
+    public function __construct($nome=null, $cpf=null, $email=null) {
         $this->nome = $nome;
         $this->cpf = $cpf;
         $this->email = $email;

@@ -12,7 +12,7 @@ class Venda {
     private $total;
     
     // Construtor 
-    public function __construct($data_venda, $cliente_id, $produto_id, $quantidade, $preco_unitario, $total) {
+    public function __construct($data_venda=null, $cliente_id=null, $produto_id=null, $quantidade=null, $preco_unitario=null, $total=null) {
         $this->data_venda = $data_venda;
         $this->cliente_id = $cliente_id;
         $this->produto_id = $produto_id;

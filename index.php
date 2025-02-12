@@ -31,9 +31,57 @@ if (isset($_POST['cadastrar_cliente'])) {
     <div class="banner">
         <h1>Bem vindo ao Sistema Floricultura</h1>
         <p>As flores mais lindas e perfeitas para todas as ocasiões!</p>
+
+
     <div class="banner-buttons">
-        <a href="#">Fazer Cadastro</a>
-        <a href="#">Ver Produtos</a>
+
+    <!-- Botão "Cadastrar" -->
+    <div class="dropdown">
+        <button class="dropbtn">
+            Cadastrar <span class="arrow">&#x25BC;</span>
+        </button>
+    <div class="dropdown-content">
+        <a href="index.php">Cliente</a>
+        <a href="produtos.php">Produto</a>
+        <a href="vendas.php">Venda</a>
+    </div>
+    </div>
+
+    <!-- Botão "Editar" -->
+    <div class="dropdown">
+        <button class="dropbtn">
+            Editar <span class="arrow">&#x25BC;</span>
+    </button>
+    <div class="dropdown-content">
+        <a href="#">Cliente</a>
+        <a href="#">Produto</a>
+        <a href="#">Venda</a>
+    </div>
+    </div>
+
+    <!-- Botão "Excluir" -->
+    <div class="dropdown">
+        <button class="dropbtn">
+            Excluir <span class="arrow">&#x25BC;</span>
+    </button>
+    <div class="dropdown-content">
+        <a href="#">Cliente</a>
+        <a href="#">Produto</a>
+        <a href="#">Venda</a>
+    </div>
+    </div>
+
+    <!-- Botão "Listar" -->
+    <div class="dropdown">
+        <button class="dropbtn">
+            Listar <span class="arrow">&#x25BC;</span>
+    </button>
+    <div class="dropdown-content">
+        <a href="lista_clientes.php">Listar Clientes</a>
+        <a href="lista_produtos.php">Listar Produtos</a>
+        <a href="lista_vendas.php">Listar Vendas</a>
+    </div>
+    </div>
     </div>
 
     <div class="bolota"></div> <!-- Apenas a bolota mantida -->
